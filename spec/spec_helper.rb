@@ -1,6 +1,7 @@
 require "capybara/rspec"
 require "nokogiri"
 require "open-uri"
+require "crawler"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

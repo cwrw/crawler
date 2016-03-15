@@ -21,3 +21,6 @@ Style/AlignParameters:
 
 Style/AndOr:
   Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
