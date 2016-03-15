@@ -1,0 +1,5 @@
+require "nokogiri"
+require "open-uri"
+require "crawler/client"
+require "crawler/parser"
+require "pry-byebug"
