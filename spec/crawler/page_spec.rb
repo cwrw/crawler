@@ -9,7 +9,7 @@ RSpec.describe Crawler::Page do
         img_assets: [URI.parse("https://gocardless.com/images/logos/funding.png")],
         css_assets: [URI.parse("https://gocardless.com/bundle/main.css")]
       }
-   )
+    )
   end
 
   let(:expected_output) do

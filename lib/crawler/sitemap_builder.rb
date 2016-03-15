@@ -12,12 +12,18 @@ class Crawler
       path = File.join(file_path, file_name)
       open(path, 'wb') do |file|
         file.write "Number of pages: #{graph.nodes.count}\n"
-        graph.nodes.each do |node|
-          file.write(node.to_s)
-        end
+        write_nodes(file)
       end
     rescue => e
       warn "Couldn't write to file with error: #{e.backtrace}"
+    end
+
+    private
+
+    def write_nodes(file)
+      graph.nodes.each do |node|
+        file.write(node.to_s)
+      end
     end
   end
 end

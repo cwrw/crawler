@@ -2,7 +2,7 @@ class Crawler
   class Parser
     attr_reader :base_uri, :document
 
-    FILES = %w(png jpeg jpg gif svg txt js css)
+    FILES = %w(png jpeg jpg gif svg txt js css).freeze
 
     def initialize(client)
       @base_uri = client.base_uri

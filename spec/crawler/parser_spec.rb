@@ -25,7 +25,6 @@ RSpec.describe Crawler::Parser do
       it "prepends host" do
         expect(subject.hrefs).to eq(expected_uris)
       end
-
     end
 
     context "duplicate urls" do
@@ -40,7 +39,6 @@ RSpec.describe Crawler::Parser do
       it "removes duplicates" do
         expect(subject.hrefs).to eq(expected_uris)
       end
-
     end
 
     context "urls with different domains" do
@@ -122,7 +120,6 @@ RSpec.describe Crawler::Parser do
       it "prepends host" do
         expect(subject.img_assets).to eq(expected_uris)
       end
-
     end
 
     context "duplicate urls" do
@@ -141,7 +138,6 @@ RSpec.describe Crawler::Parser do
         expect(subject.img_assets).to eq(expected_uris)
       end
     end
-
   end
 
   describe "css_assets" do
