@@ -26,7 +26,7 @@ class Crawler
       dfs(href)
     end
   rescue => e
-    warn "Parsing error #{e.backtrace}"
+    warn "Parsing error #{e.inspect}"
   end
 
   def assets(parser)
