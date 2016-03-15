@@ -25,6 +25,8 @@ class Crawler
     parser.hrefs.each do |href|
       dfs(href)
     end
+  rescue => e
+    warn "Parsing error #{e.backtrace}"
   end
 
   def assets(parser)
