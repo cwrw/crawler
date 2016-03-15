@@ -26,13 +26,13 @@ Or install it yourself as:
 
 #####Crawler allows you to enter a url and config through a rake task:
 
-$ rake generate_sitemap ["https://gocardless.com", {file_path: "/path/to/file", file_name: "sitemaps.txt"}]
+$ rake generate_sitemap ``["https://gocardless.com", {file_path: "/path/to/file", file_name: "sitemaps.txt"}]``
 
 ## TODO
 
-Tests
-Exception handling
-Tidy up base class
+Tests,
+Exception handling,
+Tidy up base class,
 fix algorithm as not performant
 
 ## Development
@@ -51,6 +51,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/cwrw/c
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 ## Resources
-[algorithms](https://franzejr.wordpress.com/2012/08/13/bfs-and-dfs-algorithms/)
-[search with nokogiri](http://stackoverflow.com/questions/17035503/dry-search-every-page-of-a-site-with-nokogiri)
+[algorithms](https://franzejr.wordpress.com/2012/08/13/bfs-and-dfs-algorithms/),
+[search with nokogiri](http://stackoverflow.com/questions/17035503/dry-search-every-page-of-a-site-with-nokogiri),
 [trees in ruby](http://haozeng.github.io/blog/2014/01/05/trees-in-ruby/)
