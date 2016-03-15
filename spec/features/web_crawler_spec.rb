@@ -2,6 +2,8 @@ require 'spec_helper'
 
 RSpec.feature 'Web crawler', type: :feature do
   let(:path) { File.dirname(__FILE__) }
+  let(:file_path) { File.join(path, "../../tmp/") }
+
   let(:root_page) do
     File.open(File.join(path, "../support/fixtures/index.html"))
   end
@@ -11,21 +13,25 @@ RSpec.feature 'Web crawler', type: :feature do
   end
 
   let(:fixture_sitemap) do
-    File.read(File.join(path, "../support/fixtures/sitemap.xml"))
+    File.read(File.join(path, "../support/fixtures/sitemap.txt"))
   end
 
   let(:generated_sitemap) do
-    File.read(File.join(path, "../../tmp/sitemap.xml"))
+    File.read(File.join(file_path, "sitemaps.txt"))
   end
+
+  let(:options) { { file_path: file_path, file_name: "sitemaps.txt" } }
 
   before do
-    # stub open uri url to return fixture
-    # stub second url to return fixture
-    # config set to tmp
-
-    # Crawler.build_sitemap_for("gocardless.com")
+    allow(OpenURI).to receive(:open_uri).and_return(root_page, child_page)
+    Crawler.build_sitemap_for("https://gocardless.com", options)
   end
-  scenario 'writes correct sitemap urls with static assets in xml format to file' do
+
+  after do
+    FileUtils.rm([File.join(file_path, "sitemaps.txt")])
+  end
+
+  scenario 'writes correct sitemap urls with static assets in txt format to file' do
     expect(fixture_sitemap).to eq(generated_sitemap)
   end
 end
