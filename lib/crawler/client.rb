@@ -9,7 +9,7 @@ class Crawler
     def document
       Nokogiri::HTML(open(base_uri))
     rescue OpenURI::HTTPError => error
-      warn "Failed to retreive: #{base_uri} with error: #{error.inspect}"
+      warn "Failed to retreive: #{base_uri} with error: #{error.backtrace}"
     end
   end
 end
