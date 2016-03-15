@@ -1,6 +1,6 @@
 class Crawler
   class Page
-    attr_accessor :url, :js_assets, :img_assets, :css_assets, :children
+    attr_accessor :url, :js_assets, :img_assets, :css_assets
 
     def initialize(url:, assets:)
       @url = url
@@ -15,11 +15,11 @@ class Crawler
       "---------------------------------------\n" \
       "assets:\n" \
       "javascript:\n" \
-      "#{js_assets.join("\n")}" \
+      "#{js_assets.join("\n")}\n" \
       "images:\n" \
-      "#{img_assets.join("\n")}" \
+      "#{img_assets.join("\n")}\n" \
       "stylesheets:\n" \
-      "#{css_assets.join("\n")}" \
+      "#{css_assets.join("\n")}\n" \
       "\n"
     end
   end

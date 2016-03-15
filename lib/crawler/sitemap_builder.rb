@@ -4,7 +4,7 @@ class Crawler
 
     def initialize(graph, options)
       @graph = graph
-      @file_path = options.fetch(:file_path, "#{Dir.home}/Desktop/#{file_name}")
+      @file_path = options.fetch(:file_path, "#{Dir.home}/Desktop/#{file_name}") # TODO: OSX specific need to change
       @file_name = options.fetch(:file_name, "sitemap_#{Time.now.to_i}.txt")
     end
 

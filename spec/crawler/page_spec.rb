@@ -18,11 +18,11 @@ RSpec.describe Crawler::Page do
     "---------------------------------------\n" \
     "assets:\n" \
     "javascript:\n" \
-    "www.googletagmanager.com/gtm.js" \
+    "www.googletagmanager.com/gtm.js\n" \
     "images:\n" \
-    "https://gocardless.com/images/logos/funding.png" \
+    "https://gocardless.com/images/logos/funding.png\n" \
     "stylesheets:\n" \
-    "https://gocardless.com/bundle/main.css" \
+    "https://gocardless.com/bundle/main.css\n" \
     "\n"
   end
 

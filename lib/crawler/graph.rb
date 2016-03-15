@@ -11,5 +11,3 @@ class Crawler
     end
   end
 end
-
-

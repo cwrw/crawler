@@ -35,17 +35,21 @@ RSpec.describe Crawler::SitemapBuilder do
     "---------------------------------------\n" \
     "assets:\n" \
     "javascript:\n" \
-    "www.googletagmanager.com/gtm.jsimages:\n" \
-    "https://gocardless.com/images/logos/funding.pngstylesheets:\n" \
-    "https://gocardless.com/bundle/main.css\n" \
+    "www.googletagmanager.com/gtm.js\n" \
+    "images:\n" \
+    "https://gocardless.com/images/logos/funding.png\n" \
+    "stylesheets:\n" \
+    "https://gocardless.com/bundle/main.css\n\n" \
     "---------------------------------------\n" \
     "Page: https://gocardless.com/security\n" \
     "---------------------------------------\n" \
     "assets:\n" \
     "javascript:\n" \
-    "www.googletagmanager.com/gtm.jsimages:\n" \
-    "https://gocardless.com/security/images/logos/funding.pngstylesheets:\n" \
-    "https://gocardless.com/security/bundle/main.css\n" \
+    "www.googletagmanager.com/gtm.js\n" \
+    "images:\n" \
+    "https://gocardless.com/security/images/logos/funding.png\n" \
+    "stylesheets:\n" \
+    "https://gocardless.com/security/bundle/main.css\n\n" \
   end
 
   subject { described_class.new(graph, options) }

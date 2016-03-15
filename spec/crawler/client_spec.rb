@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Crawler::Client do
-  subject { described_class.new("https://gocardless.com") }
+  subject { described_class.new(URI.parse("https://gocardless.com")) }
 
   context "valid url" do
     before do

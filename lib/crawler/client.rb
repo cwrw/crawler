@@ -2,8 +2,8 @@ class Crawler
   class Client
     attr_reader :base_uri
 
-    def initialize(base_url)
-      @base_uri = URI.parse(base_url)
+    def initialize(base_uri)
+      @base_uri = base_uri
     end
 
     def document
