@@ -2,7 +2,7 @@ class Crawler
   class Graph
     attr_reader :nodes
 
-     def initialize
+    def initialize
       @nodes = []
     end
 

@@ -8,7 +8,6 @@ RSpec.describe Crawler::Client do
       allow(OpenURI).to receive(:open_uri).and_return("my_document")
     end
 
-
     it "retrieves html document from url" do
       expect(subject.document.text).to eq("my_document")
     end
@@ -20,9 +19,8 @@ RSpec.describe Crawler::Client do
     end
 
     it "fails silently with a warning" do
-      expect(subject).to receive(:warn).with(/Failed to retreive: https:\/\/gocardless.com/)
+      expect(subject).to receive(:warn).with(%r{Failed to retreive: https:\/\/gocardless.com})
       subject.document
     end
   end
 end
-
