@@ -1,7 +1,8 @@
 class Crawler
   attr_reader :base_uri, :graph, :seen_uri
 
-  def self.build_sitemap_for(base_url, options = {})
+  def self.build_sitemap_for(base_url, file_path, file_name)
+    options = { file_path: file_path, file_name: file_name }
     crawler = new(base_url)
     crawler.generate
     Crawler::SitemapBuilder.new(crawler.graph, options).build

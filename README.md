@@ -2,9 +2,7 @@
 
 A web crawler using Depth First Search.
 
-A sitemap is best represented as a hierarchical tree, with the root node being the home page, and the subtrees the directories.
-
-Algorithm chosen for now is Depth First Searching.
+A sitemap is best represented as a graph. Algorithm chosen for now is Depth First Searching.
 
 ## Installation
 
@@ -26,9 +24,9 @@ Or install it yourself as:
 
 #####Crawler allows you to crawl a url through the following rake task:
 
-$ rake generate_sitemap ``["https://gocardless.com", {file_path: "/path/to/file", file_name: "sitemaps.txt"}]``
+$ rake generate_sitemap``["https://gocardless.com","/path/to/file","file_name"]``
 
-if you leave options empty ``["https://gocardless.com",{}]`` will default to your desktop (OSx)
+if you leave options empty ``["https://gocardless.com"]`` will default to your desktop (OSx)
 
 ## TODO
 Handle redirects,

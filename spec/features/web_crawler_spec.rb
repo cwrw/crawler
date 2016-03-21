@@ -20,11 +20,9 @@ RSpec.feature 'Web crawler', type: :feature do
     File.read(File.join(file_path, "sitemaps.txt"))
   end
 
-  let(:options) { { file_path: file_path, file_name: "sitemaps.txt" } }
-
   before do
     allow(OpenURI).to receive(:open_uri).and_return(root_page, child_page)
-    Crawler.build_sitemap_for("https://gocardless.com", options)
+    Crawler.build_sitemap_for("https://gocardless.com", file_path, "sitemaps.txt")
   end
 
   after do

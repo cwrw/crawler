@@ -4,8 +4,8 @@ class Crawler
 
     def initialize(graph, options)
       @graph = graph
-      @file_path = options.fetch(:file_path, "#{Dir.home}/Desktop/#{file_name}") # TODO: OSX specific need to change
-      @file_name = options.fetch(:file_name, "sitemap_#{Time.now.to_i}.txt")
+      @file_path = options.fetch(:file_path) || "#{Dir.home}/Desktop/" # TODO: OSX specific need to change
+      @file_name = options.fetch(:file_name) || "sitemap_#{Time.now.to_i}.txt"
     end
 
     def build
@@ -15,7 +15,7 @@ class Crawler
         write_nodes(file)
       end
     rescue => e
-      warn "Couldn't write to file with error: #{e.backtrace}"
+      warn "Couldn't write to file with error: #{e.message}"
     end
 
     private
